@@ -1,4 +1,0 @@
-More_Building_Slots_bfplayer = {
-	icon = GFX_decision_category_SOV_merge_designers
-	priority = 101 # IEF: Keep Decisions Expanded categories above vanilla categories.
-}

@@ -1,0 +1,386 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "bsr_shared_slot_summary_window"
+		position = { x = 150 y = 162 }
+		size = { width = 305 height = 195 }
+		clipping = no
+
+		background = {
+			name = "bsr_summary_bg"
+			quadTextureSprite = "GFX_tiled_window_transparent_transparent"
+			position = { x = 0 y = 0 }
+		}
+
+		instantTextboxType = {
+			name = "bsr_summary_title"
+			position = { x = 0 y = 4 }
+			textureFile = ""
+			font = "hoi_18mbs"
+			text = "BSR_SHARED_SLOT_SUMMARY_TITLE"
+			maxWidth = 295
+			maxHeight = 20
+			format = center
+		}
+
+		containerWindowType = {
+			name = "bsr_industrial_complex_row"
+			position = { x = 8 y = 35 }
+			size = { width = 285 height = 27 }
+
+			iconType = {
+				name = "bsr_industrial_complex_icon"
+				position = { x = 0 y = -1 }
+				quadTextureSprite = "GFX_buildings_strip"
+				frame = 1
+				scale = 0.6
+			}
+
+			instantTextboxType = {
+				name = "bsr_industrial_complex_text"
+				position = { x = 34 y = 3 }
+				textureFile = ""
+				font = "hoi_16mbs"
+				text = "BSR_INDUSTRIAL_COMPLEX_ROW"
+				maxWidth = 175
+				maxHeight = 20
+				format = left
+			}
+
+			buttonType = {
+				name = "bsr_remove_all_civ"
+				position = { x = 226 y = 0 }
+				spriteType = "GFX_cancel_conversion_button"
+				tooltip = "BSR_REMOVE_ALL_CIV_TT"
+			}
+
+			buttonType = {
+				name = "bsr_remove_civ"
+				position = { x = 252 y = 0 }
+				spriteType = "GFX_cancel_conversion_button"
+				tooltip = "BSR_REMOVE_CIV_TT"
+			}
+
+			buttonType = {
+				name = "bsr_confirm_remove_civ"
+				position = { x = 202 y = 2 }
+				quadTextureSprite = "GFX_checkbox_small_green"
+				tooltip = "BSR_CONFIRM_REMOVE_CIV_TT"
+			}
+
+			buttonType = {
+				name = "bsr_confirm_remove_all_civ"
+				position = { x = 202 y = 2 }
+				quadTextureSprite = "GFX_checkbox_small_green"
+				tooltip = "BSR_CONFIRM_REMOVE_ALL_CIV_TT"
+			}
+
+			buttonType = {
+				name = "bsr_cancel_remove_civ"
+				position = { x = 236 y = 0 }
+				spriteType = "GFX_cancel_conversion_button"
+				tooltip = "BSR_CANCEL_REMOVE_TT"
+			}
+		}
+
+		containerWindowType = {
+			name = "bsr_arms_factory_row"
+			position = { x = 8 y = 63 }
+			size = { width = 285 height = 27 }
+
+			iconType = {
+				name = "bsr_arms_factory_icon"
+				position = { x = 0 y = -1 }
+				quadTextureSprite = "GFX_buildings_strip"
+				frame = 2
+				scale = 0.6
+			}
+
+			instantTextboxType = {
+				name = "bsr_arms_factory_text"
+				position = { x = 34 y = 3 }
+				textureFile = ""
+				font = "hoi_16mbs"
+				text = "BSR_ARMS_FACTORY_ROW"
+				maxWidth = 175
+				maxHeight = 20
+				format = left
+			}
+
+			buttonType = {
+				name = "bsr_remove_all_mil"
+				position = { x = 226 y = 0 }
+				spriteType = "GFX_cancel_conversion_button"
+				tooltip = "BSR_REMOVE_ALL_MIL_TT"
+			}
+
+			buttonType = {
+				name = "bsr_remove_mil"
+				position = { x = 252 y = 0 }
+				spriteType = "GFX_cancel_conversion_button"
+				tooltip = "BSR_REMOVE_MIL_TT"
+			}
+
+			buttonType = {
+				name = "bsr_confirm_remove_mil"
+				position = { x = 202 y = 2 }
+				quadTextureSprite = "GFX_checkbox_small_green"
+				tooltip = "BSR_CONFIRM_REMOVE_MIL_TT"
+			}
+
+			buttonType = {
+				name = "bsr_confirm_remove_all_mil"
+				position = { x = 202 y = 2 }
+				quadTextureSprite = "GFX_checkbox_small_green"
+				tooltip = "BSR_CONFIRM_REMOVE_ALL_MIL_TT"
+			}
+
+			buttonType = {
+				name = "bsr_cancel_remove_mil"
+				position = { x = 236 y = 0 }
+				spriteType = "GFX_cancel_conversion_button"
+				tooltip = "BSR_CANCEL_REMOVE_TT"
+			}
+		}
+
+		containerWindowType = {
+			name = "bsr_dockyard_row"
+			position = { x = 8 y = 91 }
+			size = { width = 285 height = 27 }
+
+			iconType = {
+				name = "bsr_dockyard_icon"
+				position = { x = 0 y = -1 }
+				quadTextureSprite = "GFX_buildings_strip"
+				frame = 4
+				scale = 0.6
+			}
+
+			instantTextboxType = {
+				name = "bsr_dockyard_text"
+				position = { x = 34 y = 3 }
+				textureFile = ""
+				font = "hoi_16mbs"
+				text = "BSR_DOCKYARD_ROW"
+				maxWidth = 175
+				maxHeight = 20
+				format = left
+			}
+
+			buttonType = {
+				name = "bsr_remove_all_dockyard"
+				position = { x = 226 y = 0 }
+				spriteType = "GFX_cancel_conversion_button"
+				tooltip = "BSR_REMOVE_ALL_DOCKYARD_TT"
+			}
+
+			buttonType = {
+				name = "bsr_remove_dockyard"
+				position = { x = 252 y = 0 }
+				spriteType = "GFX_cancel_conversion_button"
+				tooltip = "BSR_REMOVE_DOCKYARD_TT"
+			}
+
+			buttonType = {
+				name = "bsr_confirm_remove_dockyard"
+				position = { x = 202 y = 2 }
+				quadTextureSprite = "GFX_checkbox_small_green"
+				tooltip = "BSR_CONFIRM_REMOVE_DOCKYARD_TT"
+			}
+
+			buttonType = {
+				name = "bsr_confirm_remove_all_dockyard"
+				position = { x = 202 y = 2 }
+				quadTextureSprite = "GFX_checkbox_small_green"
+				tooltip = "BSR_CONFIRM_REMOVE_ALL_DOCKYARD_TT"
+			}
+
+			buttonType = {
+				name = "bsr_cancel_remove_dockyard"
+				position = { x = 236 y = 0 }
+				spriteType = "GFX_cancel_conversion_button"
+				tooltip = "BSR_CANCEL_REMOVE_TT"
+			}
+		}
+
+		containerWindowType = {
+			name = "bsr_synthetic_refinery_row"
+			position = { x = 8 y = 119 }
+			size = { width = 285 height = 27 }
+
+			iconType = {
+				name = "bsr_synthetic_refinery_icon"
+				position = { x = 0 y = -1 }
+				quadTextureSprite = "GFX_buildings_strip"
+				frame = 10
+				scale = 0.6
+			}
+
+			instantTextboxType = {
+				name = "bsr_synthetic_refinery_text"
+				position = { x = 34 y = 3 }
+				textureFile = ""
+				font = "hoi_16mbs"
+				text = "BSR_SYNTHETIC_REFINERY_ROW"
+				maxWidth = 175
+				maxHeight = 20
+				format = left
+			}
+
+			buttonType = {
+				name = "bsr_remove_all_synthetic_refinery"
+				position = { x = 226 y = 0 }
+				spriteType = "GFX_cancel_conversion_button"
+				tooltip = "BSR_REMOVE_ALL_SYNTHETIC_REFINERY_TT"
+			}
+
+			buttonType = {
+				name = "bsr_remove_synthetic_refinery"
+				position = { x = 252 y = 0 }
+				spriteType = "GFX_cancel_conversion_button"
+				tooltip = "BSR_REMOVE_SYNTHETIC_REFINERY_TT"
+			}
+
+			buttonType = {
+				name = "bsr_confirm_remove_synthetic_refinery"
+				position = { x = 202 y = 2 }
+				quadTextureSprite = "GFX_checkbox_small_green"
+				tooltip = "BSR_CONFIRM_REMOVE_SYNTHETIC_REFINERY_TT"
+			}
+
+			buttonType = {
+				name = "bsr_confirm_remove_all_synthetic_refinery"
+				position = { x = 202 y = 2 }
+				quadTextureSprite = "GFX_checkbox_small_green"
+				tooltip = "BSR_CONFIRM_REMOVE_ALL_SYNTHETIC_REFINERY_TT"
+			}
+
+			buttonType = {
+				name = "bsr_cancel_remove_synthetic_refinery"
+				position = { x = 236 y = 0 }
+				spriteType = "GFX_cancel_conversion_button"
+				tooltip = "BSR_CANCEL_REMOVE_TT"
+			}
+		}
+
+		containerWindowType = {
+			name = "bsr_fuel_silo_row"
+			position = { x = 8 y = 147 }
+			size = { width = 285 height = 27 }
+
+			iconType = {
+				name = "bsr_fuel_silo_icon"
+				position = { x = 0 y = -1 }
+				quadTextureSprite = "GFX_buildings_strip"
+				frame = 14
+				scale = 0.6
+			}
+
+			instantTextboxType = {
+				name = "bsr_fuel_silo_text"
+				position = { x = 34 y = 3 }
+				textureFile = ""
+				font = "hoi_16mbs"
+				text = "BSR_FUEL_SILO_ROW"
+				maxWidth = 175
+				maxHeight = 20
+				format = left
+			}
+
+			buttonType = {
+				name = "bsr_remove_all_fuel_silo"
+				position = { x = 226 y = 0 }
+				spriteType = "GFX_cancel_conversion_button"
+				tooltip = "BSR_REMOVE_ALL_FUEL_SILO_TT"
+			}
+
+			buttonType = {
+				name = "bsr_remove_fuel_silo"
+				position = { x = 252 y = 0 }
+				spriteType = "GFX_cancel_conversion_button"
+				tooltip = "BSR_REMOVE_FUEL_SILO_TT"
+			}
+
+			buttonType = {
+				name = "bsr_confirm_remove_fuel_silo"
+				position = { x = 202 y = 2 }
+				quadTextureSprite = "GFX_checkbox_small_green"
+				tooltip = "BSR_CONFIRM_REMOVE_FUEL_SILO_TT"
+			}
+
+			buttonType = {
+				name = "bsr_confirm_remove_all_fuel_silo"
+				position = { x = 202 y = 2 }
+				quadTextureSprite = "GFX_checkbox_small_green"
+				tooltip = "BSR_CONFIRM_REMOVE_ALL_FUEL_SILO_TT"
+			}
+
+			buttonType = {
+				name = "bsr_cancel_remove_fuel_silo"
+				position = { x = 236 y = 0 }
+				spriteType = "GFX_cancel_conversion_button"
+				tooltip = "BSR_CANCEL_REMOVE_TT"
+			}
+		}
+
+		containerWindowType = {
+			name = "bsr_rocket_site_row"
+			position = { x = 8 y = 175 }
+			size = { width = 285 height = 27 }
+
+			iconType = {
+				name = "bsr_rocket_site_icon"
+				position = { x = 0 y = -1 }
+				quadTextureSprite = "GFX_buildings_strip"
+				frame = 12
+				scale = 0.6
+			}
+
+			instantTextboxType = {
+				name = "bsr_rocket_site_text"
+				position = { x = 34 y = 3 }
+				textureFile = ""
+				font = "hoi_16mbs"
+				text = "BSR_ROCKET_SITE_ROW"
+				maxWidth = 175
+				maxHeight = 20
+				format = left
+			}
+
+			buttonType = {
+				name = "bsr_remove_all_rocket_site"
+				position = { x = 226 y = 0 }
+				spriteType = "GFX_cancel_conversion_button"
+				tooltip = "BSR_REMOVE_ALL_ROCKET_SITE_TT"
+			}
+
+			buttonType = {
+				name = "bsr_remove_rocket_site"
+				position = { x = 252 y = 0 }
+				spriteType = "GFX_cancel_conversion_button"
+				tooltip = "BSR_REMOVE_ROCKET_SITE_TT"
+			}
+
+			buttonType = {
+				name = "bsr_confirm_remove_rocket_site"
+				position = { x = 202 y = 2 }
+				quadTextureSprite = "GFX_checkbox_small_green"
+				tooltip = "BSR_CONFIRM_REMOVE_ROCKET_SITE_TT"
+			}
+
+			buttonType = {
+				name = "bsr_confirm_remove_all_rocket_site"
+				position = { x = 202 y = 2 }
+				quadTextureSprite = "GFX_checkbox_small_green"
+				tooltip = "BSR_CONFIRM_REMOVE_ALL_ROCKET_SITE_TT"
+			}
+
+			buttonType = {
+				name = "bsr_cancel_remove_rocket_site"
+				position = { x = 236 y = 0 }
+				spriteType = "GFX_cancel_conversion_button"
+				tooltip = "BSR_CANCEL_REMOVE_TT"
+			}
+		}
+	}
+}

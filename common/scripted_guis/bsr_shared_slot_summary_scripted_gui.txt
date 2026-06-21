@@ -1,0 +1,246 @@
+scripted_gui = {
+	bsr_shared_slot_summary = {
+		context_type = selected_state_context
+		window_name = "bsr_shared_slot_summary_window"
+		parent_window_token = selected_state_view
+
+		visible = {
+			always = yes
+		}
+
+		effects = {
+			bsr_remove_civ_click = { set_state_flag = bsr_confirm_remove_civ }
+			bsr_remove_mil_click = { set_state_flag = bsr_confirm_remove_mil }
+			bsr_remove_dockyard_click = { set_state_flag = bsr_confirm_remove_dockyard }
+			bsr_remove_synthetic_refinery_click = { set_state_flag = bsr_confirm_remove_synthetic_refinery }
+			bsr_remove_fuel_silo_click = { set_state_flag = bsr_confirm_remove_fuel_silo }
+			bsr_remove_rocket_site_click = { set_state_flag = bsr_confirm_remove_rocket_site }
+
+			bsr_remove_all_civ_click = { set_state_flag = bsr_confirm_remove_all_civ }
+			bsr_remove_all_mil_click = { set_state_flag = bsr_confirm_remove_all_mil }
+			bsr_remove_all_dockyard_click = { set_state_flag = bsr_confirm_remove_all_dockyard }
+			bsr_remove_all_synthetic_refinery_click = { set_state_flag = bsr_confirm_remove_all_synthetic_refinery }
+			bsr_remove_all_fuel_silo_click = { set_state_flag = bsr_confirm_remove_all_fuel_silo }
+			bsr_remove_all_rocket_site_click = { set_state_flag = bsr_confirm_remove_all_rocket_site }
+
+			bsr_confirm_remove_civ_click = {
+				if = {
+					limit = { industrial_complex > 0 }
+					remove_building = {
+						type = industrial_complex
+						level = 1
+					}
+				}
+				clr_state_flag = bsr_confirm_remove_civ
+			}
+
+			bsr_confirm_remove_mil_click = {
+				if = {
+					limit = { arms_factory > 0 }
+					remove_building = {
+						type = arms_factory
+						level = 1
+					}
+				}
+				clr_state_flag = bsr_confirm_remove_mil
+			}
+
+			bsr_confirm_remove_dockyard_click = {
+				if = {
+					limit = { dockyard > 0 }
+					remove_building = {
+						type = dockyard
+						level = 1
+					}
+				}
+				clr_state_flag = bsr_confirm_remove_dockyard
+			}
+
+			bsr_confirm_remove_synthetic_refinery_click = {
+				if = {
+					limit = { synthetic_refinery > 0 }
+					remove_building = {
+						type = synthetic_refinery
+						level = 1
+					}
+				}
+				clr_state_flag = bsr_confirm_remove_synthetic_refinery
+			}
+
+			bsr_confirm_remove_fuel_silo_click = {
+				if = {
+					limit = { fuel_silo > 0 }
+					remove_building = {
+						type = fuel_silo
+						level = 1
+					}
+				}
+				clr_state_flag = bsr_confirm_remove_fuel_silo
+			}
+
+			bsr_confirm_remove_rocket_site_click = {
+				if = {
+					limit = { rocket_site > 0 }
+					remove_building = {
+						type = rocket_site
+						level = 1
+					}
+				}
+				clr_state_flag = bsr_confirm_remove_rocket_site
+			}
+
+			bsr_confirm_remove_all_civ_click = {
+				if = {
+					limit = { industrial_complex > 0 }
+					set_temp_variable = { bsr_remove_amount = building_level@industrial_complex }
+					remove_building = {
+						type = industrial_complex
+						level = bsr_remove_amount
+					}
+				}
+				clr_state_flag = bsr_confirm_remove_all_civ
+			}
+
+			bsr_confirm_remove_all_mil_click = {
+				if = {
+					limit = { arms_factory > 0 }
+					set_temp_variable = { bsr_remove_amount = building_level@arms_factory }
+					remove_building = {
+						type = arms_factory
+						level = bsr_remove_amount
+					}
+				}
+				clr_state_flag = bsr_confirm_remove_all_mil
+			}
+
+			bsr_confirm_remove_all_dockyard_click = {
+				if = {
+					limit = { dockyard > 0 }
+					set_temp_variable = { bsr_remove_amount = building_level@dockyard }
+					remove_building = {
+						type = dockyard
+						level = bsr_remove_amount
+					}
+				}
+				clr_state_flag = bsr_confirm_remove_all_dockyard
+			}
+
+			bsr_confirm_remove_all_synthetic_refinery_click = {
+				if = {
+					limit = { synthetic_refinery > 0 }
+					set_temp_variable = { bsr_remove_amount = building_level@synthetic_refinery }
+					remove_building = {
+						type = synthetic_refinery
+						level = bsr_remove_amount
+					}
+				}
+				clr_state_flag = bsr_confirm_remove_all_synthetic_refinery
+			}
+
+			bsr_confirm_remove_all_fuel_silo_click = {
+				if = {
+					limit = { fuel_silo > 0 }
+					set_temp_variable = { bsr_remove_amount = building_level@fuel_silo }
+					remove_building = {
+						type = fuel_silo
+						level = bsr_remove_amount
+					}
+				}
+				clr_state_flag = bsr_confirm_remove_all_fuel_silo
+			}
+
+			bsr_confirm_remove_all_rocket_site_click = {
+				if = {
+					limit = { rocket_site > 0 }
+					set_temp_variable = { bsr_remove_amount = building_level@rocket_site }
+					remove_building = {
+						type = rocket_site
+						level = bsr_remove_amount
+					}
+				}
+				clr_state_flag = bsr_confirm_remove_all_rocket_site
+			}
+
+			bsr_cancel_remove_civ_click = {
+				clr_state_flag = bsr_confirm_remove_civ
+				clr_state_flag = bsr_confirm_remove_all_civ
+			}
+
+			bsr_cancel_remove_mil_click = {
+				clr_state_flag = bsr_confirm_remove_mil
+				clr_state_flag = bsr_confirm_remove_all_mil
+			}
+
+			bsr_cancel_remove_dockyard_click = {
+				clr_state_flag = bsr_confirm_remove_dockyard
+				clr_state_flag = bsr_confirm_remove_all_dockyard
+			}
+
+			bsr_cancel_remove_synthetic_refinery_click = {
+				clr_state_flag = bsr_confirm_remove_synthetic_refinery
+				clr_state_flag = bsr_confirm_remove_all_synthetic_refinery
+			}
+
+			bsr_cancel_remove_fuel_silo_click = {
+				clr_state_flag = bsr_confirm_remove_fuel_silo
+				clr_state_flag = bsr_confirm_remove_all_fuel_silo
+			}
+
+			bsr_cancel_remove_rocket_site_click = {
+				clr_state_flag = bsr_confirm_remove_rocket_site
+				clr_state_flag = bsr_confirm_remove_all_rocket_site
+			}
+		}
+
+		triggers = {
+			bsr_remove_civ_click_enabled = { industrial_complex > 0 }
+			bsr_remove_mil_click_enabled = { arms_factory > 0 }
+			bsr_remove_dockyard_click_enabled = { dockyard > 0 }
+			bsr_remove_synthetic_refinery_click_enabled = { synthetic_refinery > 0 }
+			bsr_remove_fuel_silo_click_enabled = { fuel_silo > 0 }
+			bsr_remove_rocket_site_click_enabled = { rocket_site > 0 }
+
+			bsr_remove_all_civ_click_enabled = { industrial_complex > 0 }
+			bsr_remove_all_mil_click_enabled = { arms_factory > 0 }
+			bsr_remove_all_dockyard_click_enabled = { dockyard > 0 }
+			bsr_remove_all_synthetic_refinery_click_enabled = { synthetic_refinery > 0 }
+			bsr_remove_all_fuel_silo_click_enabled = { fuel_silo > 0 }
+			bsr_remove_all_rocket_site_click_enabled = { rocket_site > 0 }
+
+			bsr_remove_civ_visible = { NOT = { has_state_flag = bsr_confirm_remove_civ } NOT = { has_state_flag = bsr_confirm_remove_all_civ } }
+			bsr_remove_mil_visible = { NOT = { has_state_flag = bsr_confirm_remove_mil } NOT = { has_state_flag = bsr_confirm_remove_all_mil } }
+			bsr_remove_dockyard_visible = { NOT = { has_state_flag = bsr_confirm_remove_dockyard } NOT = { has_state_flag = bsr_confirm_remove_all_dockyard } }
+			bsr_remove_synthetic_refinery_visible = { NOT = { has_state_flag = bsr_confirm_remove_synthetic_refinery } NOT = { has_state_flag = bsr_confirm_remove_all_synthetic_refinery } }
+			bsr_remove_fuel_silo_visible = { NOT = { has_state_flag = bsr_confirm_remove_fuel_silo } NOT = { has_state_flag = bsr_confirm_remove_all_fuel_silo } }
+			bsr_remove_rocket_site_visible = { NOT = { has_state_flag = bsr_confirm_remove_rocket_site } NOT = { has_state_flag = bsr_confirm_remove_all_rocket_site } }
+
+			bsr_remove_all_civ_visible = { NOT = { has_state_flag = bsr_confirm_remove_civ } NOT = { has_state_flag = bsr_confirm_remove_all_civ } }
+			bsr_remove_all_mil_visible = { NOT = { has_state_flag = bsr_confirm_remove_mil } NOT = { has_state_flag = bsr_confirm_remove_all_mil } }
+			bsr_remove_all_dockyard_visible = { NOT = { has_state_flag = bsr_confirm_remove_dockyard } NOT = { has_state_flag = bsr_confirm_remove_all_dockyard } }
+			bsr_remove_all_synthetic_refinery_visible = { NOT = { has_state_flag = bsr_confirm_remove_synthetic_refinery } NOT = { has_state_flag = bsr_confirm_remove_all_synthetic_refinery } }
+			bsr_remove_all_fuel_silo_visible = { NOT = { has_state_flag = bsr_confirm_remove_fuel_silo } NOT = { has_state_flag = bsr_confirm_remove_all_fuel_silo } }
+			bsr_remove_all_rocket_site_visible = { NOT = { has_state_flag = bsr_confirm_remove_rocket_site } NOT = { has_state_flag = bsr_confirm_remove_all_rocket_site } }
+
+			bsr_confirm_remove_civ_visible = { has_state_flag = bsr_confirm_remove_civ }
+			bsr_confirm_remove_mil_visible = { has_state_flag = bsr_confirm_remove_mil }
+			bsr_confirm_remove_dockyard_visible = { has_state_flag = bsr_confirm_remove_dockyard }
+			bsr_confirm_remove_synthetic_refinery_visible = { has_state_flag = bsr_confirm_remove_synthetic_refinery }
+			bsr_confirm_remove_fuel_silo_visible = { has_state_flag = bsr_confirm_remove_fuel_silo }
+			bsr_confirm_remove_rocket_site_visible = { has_state_flag = bsr_confirm_remove_rocket_site }
+
+			bsr_confirm_remove_all_civ_visible = { has_state_flag = bsr_confirm_remove_all_civ }
+			bsr_confirm_remove_all_mil_visible = { has_state_flag = bsr_confirm_remove_all_mil }
+			bsr_confirm_remove_all_dockyard_visible = { has_state_flag = bsr_confirm_remove_all_dockyard }
+			bsr_confirm_remove_all_synthetic_refinery_visible = { has_state_flag = bsr_confirm_remove_all_synthetic_refinery }
+			bsr_confirm_remove_all_fuel_silo_visible = { has_state_flag = bsr_confirm_remove_all_fuel_silo }
+			bsr_confirm_remove_all_rocket_site_visible = { has_state_flag = bsr_confirm_remove_all_rocket_site }
+
+			bsr_cancel_remove_civ_visible = { OR = { has_state_flag = bsr_confirm_remove_civ has_state_flag = bsr_confirm_remove_all_civ } }
+			bsr_cancel_remove_mil_visible = { OR = { has_state_flag = bsr_confirm_remove_mil has_state_flag = bsr_confirm_remove_all_mil } }
+			bsr_cancel_remove_dockyard_visible = { OR = { has_state_flag = bsr_confirm_remove_dockyard has_state_flag = bsr_confirm_remove_all_dockyard } }
+			bsr_cancel_remove_synthetic_refinery_visible = { OR = { has_state_flag = bsr_confirm_remove_synthetic_refinery has_state_flag = bsr_confirm_remove_all_synthetic_refinery } }
+			bsr_cancel_remove_fuel_silo_visible = { OR = { has_state_flag = bsr_confirm_remove_fuel_silo has_state_flag = bsr_confirm_remove_all_fuel_silo } }
+			bsr_cancel_remove_rocket_site_visible = { OR = { has_state_flag = bsr_confirm_remove_rocket_site has_state_flag = bsr_confirm_remove_all_rocket_site } }
+		}
+	}
+}

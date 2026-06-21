@@ -1,0 +1,9 @@
+﻿l_english:
+ bsr_player_only:0 "Decisions Expanded: §YBuilding Slots Revamped§!"
+ bsr_player_only_desc:0 "Use these decisions to enable or disable the player-only building slot bonus."
+ bsr_player_only_slot_bonus:0 "Player Building Slot Expansion"
+ bsr_player_only_slot_bonus_desc:0 "Increases this country's building slot capacity. With vanilla state categories, the best states can reach roughly 50 slots before construction technology bonuses."
+ bsr_player_only_enable_slot_bonus:0 "Enable Player Building Slot Expansion"
+ bsr_player_only_enable_slot_bonus_desc:0 "Adds a national spirit that increases your building slot capacity. The AI will not take this decision."
+ bsr_player_only_disable_slot_bonus:0 "Disable Player Building Slot Expansion"
+ bsr_player_only_disable_slot_bonus_desc:0 "Removes the player-only building slot expansion national spirit."

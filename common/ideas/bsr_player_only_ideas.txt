@@ -1,0 +1,15 @@
+ideas = {
+	country = {
+		bsr_player_only_slot_bonus = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				global_building_slots_factor = 3.0
+			}
+		}
+	}
+}

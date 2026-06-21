@@ -1,0 +1,4 @@
+bsr_player_only = {
+	icon = GFX_decision_category_SOV_merge_designers
+	priority = 113
+}

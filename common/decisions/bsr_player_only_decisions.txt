@@ -1,0 +1,33 @@
+bsr_player_only = {
+	bsr_player_only_enable_slot_bonus = {
+		icon = GFX_decision_generic_merge_plant_tank
+
+		available = {
+			NOT = { has_idea = bsr_player_only_slot_bonus }
+		}
+
+		complete_effect = {
+			add_ideas = bsr_player_only_slot_bonus
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	bsr_player_only_disable_slot_bonus = {
+		icon = GFX_decision_generic_merge_plant_tank
+
+		available = {
+			has_idea = bsr_player_only_slot_bonus
+		}
+
+		complete_effect = {
+			remove_ideas = bsr_player_only_slot_bonus
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
