@@ -1,0 +1,15 @@
+ideas = {
+    country = {
+		More_Building_Slots_bfplayer_idea = {
+			allowed = { #added through dec
+				always = no
+			}
+				
+			removal_cost = -1
+			
+			modifier = {
+				global_building_slots_factor = 3
+			}
+		}
+	}
+}

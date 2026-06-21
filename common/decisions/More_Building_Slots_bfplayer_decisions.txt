@@ -1,0 +1,33 @@
+More_Building_Slots_bfplayer = {
+	More_Building_Slots_bfplayer_idea_add_decision = {
+		icon = GFX_decision_generic_merge_plant_tank
+
+		available = {
+			NOT = { has_idea = More_Building_Slots_bfplayer_idea }
+		}
+
+		complete_effect = { 
+			add_ideas = More_Building_Slots_bfplayer_idea
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	More_Building_Slots_bfplayer_idea_remove_decision = {
+		icon = GFX_decision_generic_merge_plant_tank
+
+		available = {
+			has_idea = More_Building_Slots_bfplayer_idea
+		}
+
+		complete_effect = { 
+			remove_ideas = More_Building_Slots_bfplayer_idea
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
