@@ -25,7 +25,7 @@ scripted_gui = {
 
 			bsr_confirm_remove_civ_click = {
 				if = {
-					limit = { industrial_complex > 0 }
+					limit = { is_controlled_by = ROOT industrial_complex > 0 }
 					remove_building = {
 						type = industrial_complex
 						level = 1
@@ -36,7 +36,7 @@ scripted_gui = {
 
 			bsr_confirm_remove_mil_click = {
 				if = {
-					limit = { arms_factory > 0 }
+					limit = { is_controlled_by = ROOT arms_factory > 0 }
 					remove_building = {
 						type = arms_factory
 						level = 1
@@ -47,7 +47,7 @@ scripted_gui = {
 
 			bsr_confirm_remove_dockyard_click = {
 				if = {
-					limit = { dockyard > 0 }
+					limit = { is_controlled_by = ROOT dockyard > 0 }
 					remove_building = {
 						type = dockyard
 						level = 1
@@ -58,7 +58,7 @@ scripted_gui = {
 
 			bsr_confirm_remove_synthetic_refinery_click = {
 				if = {
-					limit = { synthetic_refinery > 0 }
+					limit = { is_controlled_by = ROOT synthetic_refinery > 0 }
 					remove_building = {
 						type = synthetic_refinery
 						level = 1
@@ -69,7 +69,7 @@ scripted_gui = {
 
 			bsr_confirm_remove_fuel_silo_click = {
 				if = {
-					limit = { fuel_silo > 0 }
+					limit = { is_controlled_by = ROOT fuel_silo > 0 }
 					remove_building = {
 						type = fuel_silo
 						level = 1
@@ -80,7 +80,7 @@ scripted_gui = {
 
 			bsr_confirm_remove_rocket_site_click = {
 				if = {
-					limit = { rocket_site > 0 }
+					limit = { is_controlled_by = ROOT rocket_site > 0 }
 					remove_building = {
 						type = rocket_site
 						level = 1
@@ -91,7 +91,7 @@ scripted_gui = {
 
 			bsr_confirm_remove_all_civ_click = {
 				if = {
-					limit = { industrial_complex > 0 }
+					limit = { is_controlled_by = ROOT industrial_complex > 0 }
 					set_temp_variable = { bsr_remove_amount = building_level@industrial_complex }
 					remove_building = {
 						type = industrial_complex
@@ -103,7 +103,7 @@ scripted_gui = {
 
 			bsr_confirm_remove_all_mil_click = {
 				if = {
-					limit = { arms_factory > 0 }
+					limit = { is_controlled_by = ROOT arms_factory > 0 }
 					set_temp_variable = { bsr_remove_amount = building_level@arms_factory }
 					remove_building = {
 						type = arms_factory
@@ -115,7 +115,7 @@ scripted_gui = {
 
 			bsr_confirm_remove_all_dockyard_click = {
 				if = {
-					limit = { dockyard > 0 }
+					limit = { is_controlled_by = ROOT dockyard > 0 }
 					set_temp_variable = { bsr_remove_amount = building_level@dockyard }
 					remove_building = {
 						type = dockyard
@@ -127,7 +127,7 @@ scripted_gui = {
 
 			bsr_confirm_remove_all_synthetic_refinery_click = {
 				if = {
-					limit = { synthetic_refinery > 0 }
+					limit = { is_controlled_by = ROOT synthetic_refinery > 0 }
 					set_temp_variable = { bsr_remove_amount = building_level@synthetic_refinery }
 					remove_building = {
 						type = synthetic_refinery
@@ -139,7 +139,7 @@ scripted_gui = {
 
 			bsr_confirm_remove_all_fuel_silo_click = {
 				if = {
-					limit = { fuel_silo > 0 }
+					limit = { is_controlled_by = ROOT fuel_silo > 0 }
 					set_temp_variable = { bsr_remove_amount = building_level@fuel_silo }
 					remove_building = {
 						type = fuel_silo
@@ -151,7 +151,7 @@ scripted_gui = {
 
 			bsr_confirm_remove_all_rocket_site_click = {
 				if = {
-					limit = { rocket_site > 0 }
+					limit = { is_controlled_by = ROOT rocket_site > 0 }
 					set_temp_variable = { bsr_remove_amount = building_level@rocket_site }
 					remove_building = {
 						type = rocket_site
@@ -193,19 +193,19 @@ scripted_gui = {
 		}
 
 		triggers = {
-			bsr_remove_civ_click_enabled = { industrial_complex > 0 }
-			bsr_remove_mil_click_enabled = { arms_factory > 0 }
-			bsr_remove_dockyard_click_enabled = { dockyard > 0 }
-			bsr_remove_synthetic_refinery_click_enabled = { synthetic_refinery > 0 }
-			bsr_remove_fuel_silo_click_enabled = { fuel_silo > 0 }
-			bsr_remove_rocket_site_click_enabled = { rocket_site > 0 }
+			bsr_remove_civ_click_enabled = { is_controlled_by = ROOT industrial_complex > 0 }
+			bsr_remove_mil_click_enabled = { is_controlled_by = ROOT arms_factory > 0 }
+			bsr_remove_dockyard_click_enabled = { is_controlled_by = ROOT dockyard > 0 }
+			bsr_remove_synthetic_refinery_click_enabled = { is_controlled_by = ROOT synthetic_refinery > 0 }
+			bsr_remove_fuel_silo_click_enabled = { is_controlled_by = ROOT fuel_silo > 0 }
+			bsr_remove_rocket_site_click_enabled = { is_controlled_by = ROOT rocket_site > 0 }
 
-			bsr_remove_all_civ_click_enabled = { industrial_complex > 0 }
-			bsr_remove_all_mil_click_enabled = { arms_factory > 0 }
-			bsr_remove_all_dockyard_click_enabled = { dockyard > 0 }
-			bsr_remove_all_synthetic_refinery_click_enabled = { synthetic_refinery > 0 }
-			bsr_remove_all_fuel_silo_click_enabled = { fuel_silo > 0 }
-			bsr_remove_all_rocket_site_click_enabled = { rocket_site > 0 }
+			bsr_remove_all_civ_click_enabled = { is_controlled_by = ROOT industrial_complex > 0 }
+			bsr_remove_all_mil_click_enabled = { is_controlled_by = ROOT arms_factory > 0 }
+			bsr_remove_all_dockyard_click_enabled = { is_controlled_by = ROOT dockyard > 0 }
+			bsr_remove_all_synthetic_refinery_click_enabled = { is_controlled_by = ROOT synthetic_refinery > 0 }
+			bsr_remove_all_fuel_silo_click_enabled = { is_controlled_by = ROOT fuel_silo > 0 }
+			bsr_remove_all_rocket_site_click_enabled = { is_controlled_by = ROOT rocket_site > 0 }
 
 			bsr_remove_civ_visible = { NOT = { has_state_flag = bsr_confirm_remove_civ } NOT = { has_state_flag = bsr_confirm_remove_all_civ } }
 			bsr_remove_mil_visible = { NOT = { has_state_flag = bsr_confirm_remove_mil } NOT = { has_state_flag = bsr_confirm_remove_all_mil } }
