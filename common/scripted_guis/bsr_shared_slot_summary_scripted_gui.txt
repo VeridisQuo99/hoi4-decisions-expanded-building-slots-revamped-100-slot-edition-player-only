@@ -15,6 +15,8 @@ scripted_gui = {
 			bsr_remove_synthetic_refinery_click = { set_state_flag = bsr_confirm_remove_synthetic_refinery }
 			bsr_remove_fuel_silo_click = { set_state_flag = bsr_confirm_remove_fuel_silo }
 			bsr_remove_rocket_site_click = { set_state_flag = bsr_confirm_remove_rocket_site }
+			bsr_remove_energy_infrastructure_click = { set_state_flag = bsr_confirm_remove_energy_infrastructure }
+			bsr_remove_industrial_infrastructure_click = { set_state_flag = bsr_confirm_remove_industrial_infrastructure }
 
 			bsr_remove_all_civ_click = { set_state_flag = bsr_confirm_remove_all_civ }
 			bsr_remove_all_mil_click = { set_state_flag = bsr_confirm_remove_all_mil }
@@ -22,6 +24,8 @@ scripted_gui = {
 			bsr_remove_all_synthetic_refinery_click = { set_state_flag = bsr_confirm_remove_all_synthetic_refinery }
 			bsr_remove_all_fuel_silo_click = { set_state_flag = bsr_confirm_remove_all_fuel_silo }
 			bsr_remove_all_rocket_site_click = { set_state_flag = bsr_confirm_remove_all_rocket_site }
+			bsr_remove_all_energy_infrastructure_click = { set_state_flag = bsr_confirm_remove_all_energy_infrastructure }
+			bsr_remove_all_industrial_infrastructure_click = { set_state_flag = bsr_confirm_remove_all_industrial_infrastructure }
 
 			bsr_confirm_remove_civ_click = {
 				if = {
@@ -87,6 +91,28 @@ scripted_gui = {
 					}
 				}
 				clr_state_flag = bsr_confirm_remove_rocket_site
+			}
+
+			bsr_confirm_remove_energy_infrastructure_click = {
+				if = {
+					limit = { is_controlled_by = ROOT energy_infrastructure > 0 }
+					remove_building = {
+						type = energy_infrastructure
+						level = 1
+					}
+				}
+				clr_state_flag = bsr_confirm_remove_energy_infrastructure
+			}
+
+			bsr_confirm_remove_industrial_infrastructure_click = {
+				if = {
+					limit = { is_controlled_by = ROOT industrial_infrastructure > 0 }
+					remove_building = {
+						type = industrial_infrastructure
+						level = 1
+					}
+				}
+				clr_state_flag = bsr_confirm_remove_industrial_infrastructure
 			}
 
 			bsr_confirm_remove_all_civ_click = {
@@ -161,6 +187,30 @@ scripted_gui = {
 				clr_state_flag = bsr_confirm_remove_all_rocket_site
 			}
 
+			bsr_confirm_remove_all_energy_infrastructure_click = {
+				if = {
+					limit = { is_controlled_by = ROOT energy_infrastructure > 0 }
+					set_temp_variable = { bsr_remove_amount = building_level@energy_infrastructure }
+					remove_building = {
+						type = energy_infrastructure
+						level = bsr_remove_amount
+					}
+				}
+				clr_state_flag = bsr_confirm_remove_all_energy_infrastructure
+			}
+
+			bsr_confirm_remove_all_industrial_infrastructure_click = {
+				if = {
+					limit = { is_controlled_by = ROOT industrial_infrastructure > 0 }
+					set_temp_variable = { bsr_remove_amount = building_level@industrial_infrastructure }
+					remove_building = {
+						type = industrial_infrastructure
+						level = bsr_remove_amount
+					}
+				}
+				clr_state_flag = bsr_confirm_remove_all_industrial_infrastructure
+			}
+
 			bsr_cancel_remove_civ_click = {
 				clr_state_flag = bsr_confirm_remove_civ
 				clr_state_flag = bsr_confirm_remove_all_civ
@@ -190,6 +240,16 @@ scripted_gui = {
 				clr_state_flag = bsr_confirm_remove_rocket_site
 				clr_state_flag = bsr_confirm_remove_all_rocket_site
 			}
+
+			bsr_cancel_remove_energy_infrastructure_click = {
+				clr_state_flag = bsr_confirm_remove_energy_infrastructure
+				clr_state_flag = bsr_confirm_remove_all_energy_infrastructure
+			}
+
+			bsr_cancel_remove_industrial_infrastructure_click = {
+				clr_state_flag = bsr_confirm_remove_industrial_infrastructure
+				clr_state_flag = bsr_confirm_remove_all_industrial_infrastructure
+			}
 		}
 
 		triggers = {
@@ -199,6 +259,8 @@ scripted_gui = {
 			bsr_remove_synthetic_refinery_click_enabled = { is_controlled_by = ROOT synthetic_refinery > 0 }
 			bsr_remove_fuel_silo_click_enabled = { is_controlled_by = ROOT fuel_silo > 0 }
 			bsr_remove_rocket_site_click_enabled = { is_controlled_by = ROOT rocket_site > 0 }
+			bsr_remove_energy_infrastructure_click_enabled = { is_controlled_by = ROOT energy_infrastructure > 0 }
+			bsr_remove_industrial_infrastructure_click_enabled = { is_controlled_by = ROOT industrial_infrastructure > 0 }
 
 			bsr_remove_all_civ_click_enabled = { is_controlled_by = ROOT industrial_complex > 0 }
 			bsr_remove_all_mil_click_enabled = { is_controlled_by = ROOT arms_factory > 0 }
@@ -206,6 +268,8 @@ scripted_gui = {
 			bsr_remove_all_synthetic_refinery_click_enabled = { is_controlled_by = ROOT synthetic_refinery > 0 }
 			bsr_remove_all_fuel_silo_click_enabled = { is_controlled_by = ROOT fuel_silo > 0 }
 			bsr_remove_all_rocket_site_click_enabled = { is_controlled_by = ROOT rocket_site > 0 }
+			bsr_remove_all_energy_infrastructure_click_enabled = { is_controlled_by = ROOT energy_infrastructure > 0 }
+			bsr_remove_all_industrial_infrastructure_click_enabled = { is_controlled_by = ROOT industrial_infrastructure > 0 }
 
 			bsr_remove_civ_visible = { NOT = { has_state_flag = bsr_confirm_remove_civ } NOT = { has_state_flag = bsr_confirm_remove_all_civ } }
 			bsr_remove_mil_visible = { NOT = { has_state_flag = bsr_confirm_remove_mil } NOT = { has_state_flag = bsr_confirm_remove_all_mil } }
@@ -213,6 +277,8 @@ scripted_gui = {
 			bsr_remove_synthetic_refinery_visible = { NOT = { has_state_flag = bsr_confirm_remove_synthetic_refinery } NOT = { has_state_flag = bsr_confirm_remove_all_synthetic_refinery } }
 			bsr_remove_fuel_silo_visible = { NOT = { has_state_flag = bsr_confirm_remove_fuel_silo } NOT = { has_state_flag = bsr_confirm_remove_all_fuel_silo } }
 			bsr_remove_rocket_site_visible = { NOT = { has_state_flag = bsr_confirm_remove_rocket_site } NOT = { has_state_flag = bsr_confirm_remove_all_rocket_site } }
+			bsr_remove_energy_infrastructure_visible = { NOT = { has_state_flag = bsr_confirm_remove_energy_infrastructure } NOT = { has_state_flag = bsr_confirm_remove_all_energy_infrastructure } }
+			bsr_remove_industrial_infrastructure_visible = { NOT = { has_state_flag = bsr_confirm_remove_industrial_infrastructure } NOT = { has_state_flag = bsr_confirm_remove_all_industrial_infrastructure } }
 
 			bsr_remove_all_civ_visible = { NOT = { has_state_flag = bsr_confirm_remove_civ } NOT = { has_state_flag = bsr_confirm_remove_all_civ } }
 			bsr_remove_all_mil_visible = { NOT = { has_state_flag = bsr_confirm_remove_mil } NOT = { has_state_flag = bsr_confirm_remove_all_mil } }
@@ -220,6 +286,8 @@ scripted_gui = {
 			bsr_remove_all_synthetic_refinery_visible = { NOT = { has_state_flag = bsr_confirm_remove_synthetic_refinery } NOT = { has_state_flag = bsr_confirm_remove_all_synthetic_refinery } }
 			bsr_remove_all_fuel_silo_visible = { NOT = { has_state_flag = bsr_confirm_remove_fuel_silo } NOT = { has_state_flag = bsr_confirm_remove_all_fuel_silo } }
 			bsr_remove_all_rocket_site_visible = { NOT = { has_state_flag = bsr_confirm_remove_rocket_site } NOT = { has_state_flag = bsr_confirm_remove_all_rocket_site } }
+			bsr_remove_all_energy_infrastructure_visible = { NOT = { has_state_flag = bsr_confirm_remove_energy_infrastructure } NOT = { has_state_flag = bsr_confirm_remove_all_energy_infrastructure } }
+			bsr_remove_all_industrial_infrastructure_visible = { NOT = { has_state_flag = bsr_confirm_remove_industrial_infrastructure } NOT = { has_state_flag = bsr_confirm_remove_all_industrial_infrastructure } }
 
 			bsr_confirm_remove_civ_visible = { has_state_flag = bsr_confirm_remove_civ }
 			bsr_confirm_remove_mil_visible = { has_state_flag = bsr_confirm_remove_mil }
@@ -227,6 +295,8 @@ scripted_gui = {
 			bsr_confirm_remove_synthetic_refinery_visible = { has_state_flag = bsr_confirm_remove_synthetic_refinery }
 			bsr_confirm_remove_fuel_silo_visible = { has_state_flag = bsr_confirm_remove_fuel_silo }
 			bsr_confirm_remove_rocket_site_visible = { has_state_flag = bsr_confirm_remove_rocket_site }
+			bsr_confirm_remove_energy_infrastructure_visible = { has_state_flag = bsr_confirm_remove_energy_infrastructure }
+			bsr_confirm_remove_industrial_infrastructure_visible = { has_state_flag = bsr_confirm_remove_industrial_infrastructure }
 
 			bsr_confirm_remove_all_civ_visible = { has_state_flag = bsr_confirm_remove_all_civ }
 			bsr_confirm_remove_all_mil_visible = { has_state_flag = bsr_confirm_remove_all_mil }
@@ -234,6 +304,8 @@ scripted_gui = {
 			bsr_confirm_remove_all_synthetic_refinery_visible = { has_state_flag = bsr_confirm_remove_all_synthetic_refinery }
 			bsr_confirm_remove_all_fuel_silo_visible = { has_state_flag = bsr_confirm_remove_all_fuel_silo }
 			bsr_confirm_remove_all_rocket_site_visible = { has_state_flag = bsr_confirm_remove_all_rocket_site }
+			bsr_confirm_remove_all_energy_infrastructure_visible = { has_state_flag = bsr_confirm_remove_all_energy_infrastructure }
+			bsr_confirm_remove_all_industrial_infrastructure_visible = { has_state_flag = bsr_confirm_remove_all_industrial_infrastructure }
 
 			bsr_cancel_remove_civ_visible = { OR = { has_state_flag = bsr_confirm_remove_civ has_state_flag = bsr_confirm_remove_all_civ } }
 			bsr_cancel_remove_mil_visible = { OR = { has_state_flag = bsr_confirm_remove_mil has_state_flag = bsr_confirm_remove_all_mil } }
@@ -241,6 +313,8 @@ scripted_gui = {
 			bsr_cancel_remove_synthetic_refinery_visible = { OR = { has_state_flag = bsr_confirm_remove_synthetic_refinery has_state_flag = bsr_confirm_remove_all_synthetic_refinery } }
 			bsr_cancel_remove_fuel_silo_visible = { OR = { has_state_flag = bsr_confirm_remove_fuel_silo has_state_flag = bsr_confirm_remove_all_fuel_silo } }
 			bsr_cancel_remove_rocket_site_visible = { OR = { has_state_flag = bsr_confirm_remove_rocket_site has_state_flag = bsr_confirm_remove_all_rocket_site } }
+			bsr_cancel_remove_energy_infrastructure_visible = { OR = { has_state_flag = bsr_confirm_remove_energy_infrastructure has_state_flag = bsr_confirm_remove_all_energy_infrastructure } }
+			bsr_cancel_remove_industrial_infrastructure_visible = { OR = { has_state_flag = bsr_confirm_remove_industrial_infrastructure has_state_flag = bsr_confirm_remove_all_industrial_infrastructure } }
 		}
 	}
 }

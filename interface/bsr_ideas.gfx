@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_bsr_player_only_slot_bonus"
+		texturefile = "gfx/interface/ideas/bsr_player_only_slot_bonus.png"
+	}
+}

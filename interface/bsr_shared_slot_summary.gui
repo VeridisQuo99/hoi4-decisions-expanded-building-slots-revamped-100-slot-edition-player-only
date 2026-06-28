@@ -3,7 +3,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "bsr_shared_slot_summary_window"
 		position = { x = 150 y = 162 }
-		size = { width = 305 height = 195 }
+		size = { width = 305 height = 255 }
 		clipping = no
 
 		background = {
@@ -377,6 +377,126 @@ guiTypes = {
 
 			buttonType = {
 				name = "bsr_cancel_remove_rocket_site"
+				position = { x = 236 y = 0 }
+				spriteType = "GFX_cancel_conversion_button"
+				tooltip = "BSR_CANCEL_REMOVE_TT"
+			}
+		}
+
+		containerWindowType = {
+			name = "bsr_energy_infrastructure_row"
+			position = { x = 8 y = 203 }
+			size = { width = 285 height = 27 }
+
+			iconType = {
+				name = "bsr_energy_infrastructure_icon"
+				position = { x = 0 y = -1 }
+				quadTextureSprite = "GFX_buildings_strip"
+				frame = 30
+				scale = 0.6
+			}
+
+			instantTextboxType = {
+				name = "bsr_energy_infrastructure_text"
+				position = { x = 34 y = 3 }
+				textureFile = ""
+				font = "hoi_16mbs"
+				text = "BSR_ENERGY_INFRASTRUCTURE_ROW"
+				maxWidth = 175
+				maxHeight = 20
+				format = left
+			}
+
+			buttonType = {
+				name = "bsr_remove_all_energy_infrastructure"
+				position = { x = 226 y = 0 }
+				spriteType = "GFX_cancel_conversion_button"
+				tooltip = "BSR_REMOVE_ALL_ENERGY_INFRASTRUCTURE_TT"
+			}
+
+			buttonType = {
+				name = "bsr_remove_energy_infrastructure"
+				position = { x = 252 y = 0 }
+				spriteType = "GFX_cancel_conversion_button"
+				tooltip = "BSR_REMOVE_ENERGY_INFRASTRUCTURE_TT"
+			}
+
+			buttonType = {
+				name = "bsr_confirm_remove_energy_infrastructure"
+				position = { x = 202 y = 2 }
+				quadTextureSprite = "GFX_checkbox_small_green"
+				tooltip = "BSR_CONFIRM_REMOVE_ENERGY_INFRASTRUCTURE_TT"
+			}
+
+			buttonType = {
+				name = "bsr_confirm_remove_all_energy_infrastructure"
+				position = { x = 202 y = 2 }
+				quadTextureSprite = "GFX_checkbox_small_green"
+				tooltip = "BSR_CONFIRM_REMOVE_ALL_ENERGY_INFRASTRUCTURE_TT"
+			}
+
+			buttonType = {
+				name = "bsr_cancel_remove_energy_infrastructure"
+				position = { x = 236 y = 0 }
+				spriteType = "GFX_cancel_conversion_button"
+				tooltip = "BSR_CANCEL_REMOVE_TT"
+			}
+		}
+
+		containerWindowType = {
+			name = "bsr_industrial_infrastructure_row"
+			position = { x = 8 y = 231 }
+			size = { width = 285 height = 27 }
+
+			iconType = {
+				name = "bsr_industrial_infrastructure_icon"
+				position = { x = 0 y = -1 }
+				quadTextureSprite = "GFX_buildings_strip"
+				frame = 31
+				scale = 0.6
+			}
+
+			instantTextboxType = {
+				name = "bsr_industrial_infrastructure_text"
+				position = { x = 34 y = 3 }
+				textureFile = ""
+				font = "hoi_16mbs"
+				text = "BSR_INDUSTRIAL_INFRASTRUCTURE_ROW"
+				maxWidth = 175
+				maxHeight = 20
+				format = left
+			}
+
+			buttonType = {
+				name = "bsr_remove_all_industrial_infrastructure"
+				position = { x = 226 y = 0 }
+				spriteType = "GFX_cancel_conversion_button"
+				tooltip = "BSR_REMOVE_ALL_INDUSTRIAL_INFRASTRUCTURE_TT"
+			}
+
+			buttonType = {
+				name = "bsr_remove_industrial_infrastructure"
+				position = { x = 252 y = 0 }
+				spriteType = "GFX_cancel_conversion_button"
+				tooltip = "BSR_REMOVE_INDUSTRIAL_INFRASTRUCTURE_TT"
+			}
+
+			buttonType = {
+				name = "bsr_confirm_remove_industrial_infrastructure"
+				position = { x = 202 y = 2 }
+				quadTextureSprite = "GFX_checkbox_small_green"
+				tooltip = "BSR_CONFIRM_REMOVE_INDUSTRIAL_INFRASTRUCTURE_TT"
+			}
+
+			buttonType = {
+				name = "bsr_confirm_remove_all_industrial_infrastructure"
+				position = { x = 202 y = 2 }
+				quadTextureSprite = "GFX_checkbox_small_green"
+				tooltip = "BSR_CONFIRM_REMOVE_ALL_INDUSTRIAL_INFRASTRUCTURE_TT"
+			}
+
+			buttonType = {
+				name = "bsr_cancel_remove_industrial_infrastructure"
 				position = { x = 236 y = 0 }
 				spriteType = "GFX_cancel_conversion_button"
 				tooltip = "BSR_CANCEL_REMOVE_TT"

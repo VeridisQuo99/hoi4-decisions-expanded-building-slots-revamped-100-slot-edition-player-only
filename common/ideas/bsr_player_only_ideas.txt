@@ -1,6 +1,8 @@
 ideas = {
 	country = {
 		bsr_player_only_slot_bonus = {
+			picture = bsr_player_only_slot_bonus
+
 			allowed = {
 				always = no
 			}
